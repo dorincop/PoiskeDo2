@@ -24,7 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "start": "node server",
+    "setup:https": "openssl genrsa -out ./localhost.key 2048 && openssl req -new -x509 -key ./localhost.key -out ./localhost.crt -days 3650 -subj /CN=localhost"
   },
   "repository": {
     "type": "git",
